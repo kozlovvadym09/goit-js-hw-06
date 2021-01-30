@@ -72,7 +72,9 @@ console.log(calculateTotalBalance(users));
 // Task-8 
 
 const getUsersWithFriend = (users, friendName) => {
-   return users.filter(user => user.friends.some(friend => friend === friendName));  
+   return users
+      .filter(user => user.friends.some(friend => friend === friendName))
+      .map(user => user.name);
 };
 
 console.log(getUsersWithFriend(users, 'Briana Decker')); 
